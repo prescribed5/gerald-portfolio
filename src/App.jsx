@@ -14,44 +14,43 @@ export default function GeraldPortfolioRevamp() {
     'CRM Workflows',
     'Zapier Integrations',
     'Google Tag Manager',
-    'Google Analytics',
   ];
 
   const workItems = [
-  {
-    title: 'Facebook Ads Results',
-    description: 'Meta campaigns built for lead generation, budget scaling, and conversion tracking.',
-    image: '/fb-ads.png'
-  },
-  {
-    title: 'Google Ads Results',
-    description: 'Search and display campaigns optimized for better conversions and stronger ROI.',
-    image: '/google-ads.png'
-  },
-  {
-    title: 'GoHighLevel Automations',
-    description: 'CRM workflows, follow-up automations, and pipeline systems that improve response time.',
-    image: '/ghl.png'
-  },
-];
+    {
+      title: 'Facebook Ads Results',
+      description:
+        'Meta campaigns built for lead generation, budget scaling, and conversion tracking.',
+    },
+    {
+      title: 'Google Ads Results',
+      description:
+        'Search and display campaigns optimized for better conversions and stronger ROI.',
+    },
+    {
+      title: 'GoHighLevel Automations',
+      description:
+        'CRM workflows, follow-up automations, and pipeline systems that improve response time.',
+    },
+  ];
 
   const educationItems = [
     {
-      school: 'University of Southeastern Philippines - Main Campus',
-      level: 'Bachelor of Science in Industrial Technology Major in Electrical Technology',
-      period: '2022 - 2026',
-      details: 'Dean\'s List, Cum laude candidate,',
+      school: 'Add Your School Name',
+      level: 'Bachelor / College Degree',
+      period: '20XX - 20XX',
+      details: 'Add your course, achievements, honors, or relevant academic highlights here.',
     },
     {
-      school: 'Brokenshire College Toril',
+      school: 'Add Your Senior High School',
       level: 'Senior High School',
-      period: '2018 - 2020',
-      details: 'STEM, With Honors',
+      period: '20XX - 20XX',
+      details: 'Add your strand, awards, leadership, or activities here.',
     },
   ];
 
   const cvFile = '/gerald-cv.pdf';
-  const bookingLink = 'https://calendar.app.google/ckWEBNEWfk7Muye58';
+  const bookingLink = 'https://your-booking-link.com';
 
   return (
     <>
@@ -316,12 +315,12 @@ export default function GeraldPortfolioRevamp() {
         }
 
         .work-preview {
-  width: 100%;
-  height: 190px;
-  object-fit: cover;
-  border-radius: 20px;
-  border: 1px solid rgba(255,255,255,0.1);
-}
+          height: 190px;
+          border-radius: 20px;
+          border: 1px dashed rgba(255,255,255,0.12);
+          background: linear-gradient(135deg, rgba(163,230,53,0.07), rgba(255,255,255,0.02));
+          margin-bottom: 18px;
+        }
 
         .timeline {
           display: grid;
@@ -387,28 +386,37 @@ export default function GeraldPortfolioRevamp() {
         }
 
         @media (max-width: 980px) {
-          .navbar-inner,
-          .section-top,
-          .hero-grid {
-            grid-template-columns: 1fr;
-            display: grid;
+          .navbar-inner {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 14px;
           }
 
-          .navbar-inner {
-            justify-items: center;
-            text-align: center;
+          .nav-links {
+            gap: 14px;
           }
 
           .hero {
-            padding-top: 54px;
+            padding-top: 52px;
           }
 
           .hero-grid {
-            gap: 28px;
+            grid-template-columns: 1fr;
+            gap: 30px;
           }
 
           .hero-photo-wrap {
-            min-height: 440px;
+            min-height: 430px;
+            order: -1;
+          }
+
+          .section-top {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
           }
 
           .cards-3 {
@@ -417,16 +425,144 @@ export default function GeraldPortfolioRevamp() {
         }
 
         @media (max-width: 640px) {
-          .container { width: min(100% - 22px, 1120px); }
-          .nav-links { gap: 12px; }
-          .nav-links a { font-size: 14px; }
-          .lead { font-size: 18px; }
-          .btn { width: 100%; }
-          .hero-actions, .contact-actions { flex-direction: column; }
-          .photo-card img { height: 410px; }
-          .orb.one { width: 360px; height: 360px; }
-          .orb.two { width: 250px; height: 250px; }
-          .section { padding: 74px 0; }
+          .container {
+            width: min(100% - 20px, 1120px);
+          }
+
+          .navbar-inner {
+            padding: 14px 0 16px;
+          }
+
+          .brand {
+            font-size: 20px;
+          }
+
+          .nav-links {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 10px;
+          }
+
+          .nav-links a {
+            display: block;
+            padding: 10px 8px;
+            border-radius: 12px;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.06);
+            font-size: 13px;
+          }
+
+          .hero {
+            padding: 34px 0 54px;
+          }
+
+          h1 {
+            font-size: 42px;
+            line-height: 1.02;
+          }
+
+          .lead {
+            font-size: 17px;
+            line-height: 1.75;
+            margin-top: 18px;
+          }
+
+          .eyebrow {
+            letter-spacing: 0.22em;
+            font-size: 11px;
+            margin-bottom: 14px;
+          }
+
+          .chip-row {
+            gap: 10px;
+            margin-top: 22px;
+          }
+
+          .chip {
+            width: calc(50% - 5px);
+            text-align: center;
+            font-size: 13px;
+            padding: 10px 12px;
+          }
+
+          .btn {
+            width: 100%;
+            padding: 14px 18px;
+          }
+
+          .hero-actions,
+          .contact-actions {
+            flex-direction: column;
+          }
+
+          .hero-photo-wrap {
+            min-height: 320px;
+          }
+
+          .photo-card {
+            width: 280px;
+            padding: 10px;
+            border-radius: 22px;
+          }
+
+          .photo-card img {
+            height: 340px;
+            border-radius: 16px;
+          }
+
+          .orb.one {
+            width: 300px;
+            height: 300px;
+          }
+
+          .orb.two {
+            width: 210px;
+            height: 210px;
+          }
+
+          .dot.a { top: 34px; left: 18px; }
+          .dot.b { top: 72px; right: 18px; }
+          .dot.c { bottom: 54px; right: 40px; }
+          .dot.d { bottom: 24px; right: 24px; }
+
+          .section {
+            padding: 64px 0;
+          }
+
+          .section-title {
+            font-size: 38px;
+            line-height: 1.05;
+          }
+
+          .section-text {
+            font-size: 16px;
+            line-height: 1.8;
+          }
+
+          .card,
+          .timeline-item {
+            padding: 22px;
+            border-radius: 22px;
+          }
+
+          .card h3,
+          .timeline-item h3 {
+            font-size: 22px;
+          }
+
+          .work-preview {
+            height: 200px;
+          }
+
+          .timeline-top {
+            align-items: flex-start;
+          }
+
+          .badge {
+            font-size: 13px;
+            padding: 9px 14px;
+          }
         }
       `}</style>
 
@@ -522,7 +658,7 @@ export default function GeraldPortfolioRevamp() {
               <div className="cards-3">
                 {workItems.map((item) => (
                   <div className="card" key={item.title}>
-                    <img src={item.image} className="work-preview" />
+                    <div className="work-preview" />
                     <h3>{item.title}</h3>
                     <p>{item.description}</p>
                   </div>
