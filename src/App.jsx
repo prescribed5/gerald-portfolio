@@ -744,10 +744,14 @@ export default function GeraldPortfolioRevamp() {
 
                 <div className="contact-actions">
                   <a className="btn btn-primary" href={bookingLink} target="_blank" rel="noreferrer">Jump on a Call</a>
-                  <a className="btn btn-secondary" href={`mailto:${email}`}>{email}</a>
+                  <a className="btn btn-secondary" href={`mailto:${email}`}>Email Me</a>
                   <a className="btn btn-secondary" href={whatsappLink} target="_blank" rel="noreferrer">WhatsApp</a>
                   <a className="btn btn-secondary" href={cvFile} download>Download CV</a>
                 </div>
+
+                <p className="section-text" style={{ margin: '18px auto 0', fontSize: 14 }}>
+                  {email} &nbsp;•&nbsp; {whatsappNumber}
+                </p>
               </div>
             </div>
           </section>
