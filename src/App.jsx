@@ -21,36 +21,41 @@ export default function GeraldPortfolioRevamp() {
       title: 'Facebook Ads Results',
       description:
         'Meta campaigns built for lead generation, budget scaling, and conversion tracking.',
+      image: '/fb-ads.png',
+      stat: '10x ROAS on $10,000 Meta ad spend',
     },
     {
       title: 'Google Ads Results',
       description:
         'Search and display campaigns optimized for better conversions and stronger ROI.',
+      image: '/google-ads.png',
+      stat: '15x ROAS on $20,000 Google ad spend',
     },
     {
       title: 'GoHighLevel Automations',
       description:
         'CRM workflows, follow-up automations, and pipeline systems that improve response time.',
+      image: '/ghl.webp',
     },
   ];
 
   const educationItems = [
     {
-      school: 'Add Your School Name',
-      level: 'Bachelor / College Degree',
-      period: '20XX - 20XX',
-      details: 'Add your course, achievements, honors, or relevant academic highlights here.',
+      school: 'University of Southeastern Philippines',
+      level: 'Bachelor of Science in Industrial Technology, Major in Electrical Technology',
+      period: '2022 - 2026',
+      details: 'Cum Laude, Consistent Dean’s Lister.',
     },
     {
-      school: 'Add Your Senior High School',
+      school: 'Brokenshire College Toril',
       level: 'Senior High School',
-      period: '20XX - 20XX',
-      details: 'Add your strand, awards, leadership, or activities here.',
+      period: '2018 - 2020',
+      details: 'Graduated With Honors.',
     },
   ];
 
   const cvFile = '/gerald-cv.pdf';
-  const bookingLink = 'https://your-booking-link.com';
+  const bookingLink = 'https://calendar.app.google/5Tyt4UFk6ih9qTLT9';
 
   return (
     <>
@@ -315,11 +320,38 @@ export default function GeraldPortfolioRevamp() {
         }
 
         .work-preview {
+          display: block;
           height: 190px;
           border-radius: 20px;
-          border: 1px dashed rgba(255,255,255,0.12);
+          border: 1px solid rgba(255,255,255,0.1);
           background: linear-gradient(135deg, rgba(163,230,53,0.07), rgba(255,255,255,0.02));
           margin-bottom: 18px;
+          overflow: hidden;
+          cursor: zoom-in;
+        }
+
+        .work-preview img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+          transition: transform 0.35s ease;
+        }
+
+        .work-preview:hover img {
+          transform: scale(1.06);
+        }
+
+        .stat-badge {
+          display: inline-block;
+          background: rgba(163,230,53,0.08);
+          border: 1px solid rgba(163,230,53,0.24);
+          color: #b7f36b;
+          border-radius: 999px;
+          padding: 6px 14px;
+          font-size: 13px;
+          font-weight: 700;
+          margin-bottom: 12px;
         }
 
         .timeline {
@@ -658,7 +690,16 @@ export default function GeraldPortfolioRevamp() {
               <div className="cards-3">
                 {workItems.map((item) => (
                   <div className="card" key={item.title}>
-                    <div className="work-preview" />
+                    <a
+                      className="work-preview"
+                      href={item.image}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`View full ${item.title} screenshot`}
+                    >
+                      <img src={item.image} alt={item.title} loading="lazy" />
+                    </a>
+                    {item.stat && <div className="stat-badge">{item.stat}</div>}
                     <h3>{item.title}</h3>
                     <p>{item.description}</p>
                   </div>
