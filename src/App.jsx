@@ -35,7 +35,7 @@ export default function GeraldPortfolioRevamp() {
       title: 'GoHighLevel Automations',
       description:
         'CRM workflows, follow-up automations, and pipeline systems that improve response time.',
-      image: '/ghl.webp',
+      image: '/ghl.png',
     },
   ];
 
