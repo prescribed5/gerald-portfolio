@@ -22,17 +22,17 @@ export default function GeraldPortfolioRevamp() {
       description:
         'Meta campaigns built for lead generation, budget scaling, and conversion tracking.',
       image: '/fb-ads.png',
-      stat: '10x ROAS on $10,000 Meta ad spend',
+      stat: '10x ROAS on $10,000 monthly Meta ad spend',
     },
     {
       title: 'Google Ads Results',
       description:
         'Search and display campaigns optimized for better conversions and stronger ROI.',
       image: '/google-ads.png',
-      stat: '15x ROAS on $20,000 Google ad spend',
+      stat: '15x ROAS on $20,000 monthly Google ad spend',
     },
     {
-      title: 'GoHighLevel Automations',
+      title: 'GoHighLevel Booking System | SMS & Email Sequence',
       description:
         'CRM workflows, follow-up automations, and pipeline systems that improve response time.',
       image: '/ghl.png',
