@@ -56,6 +56,9 @@ export default function GeraldPortfolioRevamp() {
 
   const cvFile = '/gerald-cv.pdf';
   const bookingLink = 'https://calendar.app.google/5Tyt4UFk6ih9qTLT9';
+  const email = 'geraldsalimbangan03@gmail.com';
+  const whatsappNumber = '+639685727469';
+  const whatsappLink = `https://wa.me/${whatsappNumber.replace(/[^\d]/g, '')}`;
 
   return (
     <>
@@ -736,11 +739,13 @@ export default function GeraldPortfolioRevamp() {
                 <div className="eyebrow">Contact</div>
                 <h2 className="section-title">Let&apos;s Build Your Growth System</h2>
                 <p className="section-text" style={{ margin: '20px auto 0' }}>
-                  Ready to scale your business with paid ads and GoHighLevel systems? Add your booking link, email, or contact form here.
+                  Ready to scale your business with paid ads and GoHighLevel systems? Book a free call, or reach out directly by email or WhatsApp.
                 </p>
 
                 <div className="contact-actions">
                   <a className="btn btn-primary" href={bookingLink} target="_blank" rel="noreferrer">Jump on a Call</a>
+                  <a className="btn btn-secondary" href={`mailto:${email}`}>{email}</a>
+                  <a className="btn btn-secondary" href={whatsappLink} target="_blank" rel="noreferrer">WhatsApp</a>
                   <a className="btn btn-secondary" href={cvFile} download>Download CV</a>
                 </div>
               </div>
